@@ -95,8 +95,4 @@ for i in map(str, range(0,2900,100)):
     df['Transmission'] = df['Specs'].str.extract(r'\s*transmission\:(.*)')
     df['Title Status'] = df['Specs'].str.extract((r'\s*title status\:(.*)'))
 
-    #df['trans']= df['Specs'].str.extract(r'(\s*transmission:\s\d*)')
-    #df['manauto'] = df['trans'].str.extract(r'(\d+)')
-    #df['tran']= df['Specs'].str.extract(r'(\s*transmission\:(.*)\s*)')
-
-df[['Titles', 'Prices', 'Links', 'PostDates', 'Description', 'Specs', 'Odometer', 'Transmission', 'Title']].to_csv(r'C:\Users\bdukoff\Desktop\Bots\Cars.csv', index = False)
+df[['Titles', 'Prices', 'Links', 'PostDates', 'Description', 'Specs', 'Odometer', 'Transmission', 'Title']].to_csv(FileName, index = False)
